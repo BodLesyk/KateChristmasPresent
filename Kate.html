@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style> 
+    body {
+        background: url('./WinterAnimation.gif');
+        background-size: 2000px 1000px;
+}
+ .damn {
+    text-decoration: none;
+  display: inline-block;
+  color: rgb(9, 8, 8);
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #f030c0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  
+ }
+
+ .butt{
+    text-decoration: none;
+  display: inline-block;
+  color: rgb(9, 8, 8);
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #f030c0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+ }
+.white{
+    color: rgb(246, 239, 239);
+}
+.block{
+    display: block;
+}
+
+    </style>
+  <title>Тег DOCTYPE</title>
+  </head>
+  <body>
+    
+    <h1 class="white">&#10084; Привет, моя Катюня! Заполни, пожалуйста, данные ниже &#10084;</h1>
+ 
+    <form id="form"  name="form"  class="damn">
+        <p><b>Ваше имя:</b><br>
+         <input name="name" type="text" size="40">
+        </p>
+        <p><b>Как могу к Вам обращаться:</b><Br>
+            <input type="radio" name="sweet" value="Kicya"> Киця &#128571;<Br>
+            <input type="radio" name="sweet" value="Popka"> Попка &#129392;<Br>
+            <input type="radio" name="sweet" value="Zaya"> Зая &#128536;            <Br>
+           </p>
+           <p><b>Пожелания к подарку на Николайчика и Новый Год!🎅<br>
+            (Постараюсь все исполнить для тебя &#128519;)
+           </b><Br>
+            <textarea name="comment" cols="77" rows="10"></textarea></p>
+           <input type="submit" value="Отправить" class="damn" onclick="resetAct()">
+           <input type="reset" value="Очистить" class="damn">
+            </p>
+    </form>
+    
+    
+        <audio class="block" controls="controls" autoplay>
+            <source src="./novogodnyaya-muzyka---fon-volshebnaya-muzyka.mp3" type="audio/mp3">
+            </audio>
+    <script>
+        function reset(){
+            document.getElementById('form').reset();
+            
+        }
+        function resetAct(){
+             setTimeout(reset, 100);
+             
+        }
+        document.querySelector('#form').addEventListener('submit', (e) => {
+         e.preventDefault();
+             const formData = Object.fromEntries(new FormData(e.target).entries());
+            console.log(formData)
+});
+
+
+
+    </script>
+  </body>
+</html>
